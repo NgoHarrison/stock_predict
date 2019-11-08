@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>Log in</title>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            color: #777;
+            font-family: sans-serif;
+            font-weight: 300;
+
+            background:  #dc2430;
+            background: -webkit-gradient(linear, right top, left top, from(#dc2430), to(#7b4397));
+            background:  linear-gradient(to left, #dc2430, #7b4397);
+        }
+
+        h1{
+            margin:0;
+            padding: 0 0 20px;
+            text-align:center;
+            font-size:21px;
+        }
+        .error{
+            font-size: 30px;
+            color: black;
+        }
+        .container{
+            width:700px;
+            height:600px;
+            background:	#dc2430;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            background-color: rgba(255, 255, 255, 0);
+            padding: 100px 40px;
+
+        }
+
+        p{
+            margin:0;
+            padding:0;
+            font-weight:bold;
+        }
+        ::placeholder {
+            color: white;
+            opacity: 1;
+        }
+        .btn-1 {
+            background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+        }
+        .btn {
+            flex: 1 1 auto;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 100% auto;
+            color: white;
+            /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<div class = "container">
+    <div class="row">
+    <h1>Search the name of the stock you want to predict!</h1>
+    <form method="POST">
+        <div class="form-inline">
+        <div class="col">
+            <input class="form-control form-control-lg" name="stock" type="text" placeholder="e.g., AAPL">
+        </div>
+        <div class="col">
+            <input class="btn btn-1" type="submit" value="Search">
+
+        </div>
+        </div>
+    </form>
+    </div>
+
+
+    <div class="row" style="padding-top: 100px;">
+        <h1>Recent stocks</h1>
+        <img src="/static/stock_analysis.jpg">
+    </div>
+</div>
+
+
+
+
+
+</body>
+</head>
+</html>

@@ -1,0 +1,30 @@
+/*!
+ * Start Bootstrap - New Age v5.0.4 (https://startbootstrap.com/template-overviews/new-age)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/*
+#7b4397
+#dc2430
+*/
+body {
+  margin: 0;
+  background:  #dc2430;
+  background: -webkit-gradient(linear, right top, left top, from(#dc2430), to(#7b4397));
+  background:  linear-gradient(to left, #dc2430, #7b4397);
+}
+
